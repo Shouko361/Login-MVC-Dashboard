@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="http://localhost/mvc/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/fav.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body id="login">
+    
+    <div class="box_login">
+
+        <div class="login_icon"></div>
+        
+        <h1 id="login">Faça seu login</h1>
+
+        <form method="POST" action="login/check">
+
+            <input type="email" name="email" placeholder="Email">
+            <input id="senha" type="password" name="senha" placeholder="Senha">
+
+            <button id="btn">Entrar</button><br>
+
+            {% if error != ''%}
+                <span class="msg_error" id="login">Email ou senha incorretos!! </span>
+            {% endif %}
+            
+            </form>
+
+    </div>
+
+</body>
+</html>
